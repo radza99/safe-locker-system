@@ -1,0 +1,156 @@
+  body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f4f7fa;
+            margin: 0;
+            padding: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* ช่องค้นหา */
+        .search-box {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .search-box input {
+            padding: 12px;
+            width: 70%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 8px 0 0 8px;
+            font-size: 16px;
+            
+        }
+        .search-box button {
+            padding: 12px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .search-box button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        .clear-search {
+            background: #e74c3c;
+            display: inline-block;
+            margin-left: 10px;
+            color: #ffffff;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+        .clear-search:hover {
+            transform: translateY(-2px);
+        }
+        
+
+        /* ตารางบนจอใหญ่ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #3498db;
+            color: white;
+        }
+        .status.active { color: #27ae60; font-weight: bold; }
+        .status.inactive { color: #e74c3c; font-weight: bold; }
+        .btn-edit, .btn-open , .back-link a , .clear-search {
+            padding: 8px 12px;
+            margin: 4px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+        }
+        .btn-edit { 
+            background: #3498db; 
+            color: white;
+            transition: all 0.3s ease; 
+        }
+        .btn-edit:hover {
+            background: #236b9b;
+            transform: translateY(-0.5px);
+            
+        }
+
+        .btn-open { 
+            background: #e67e22;
+             color: white; 
+            transition: all 0.3s ease;
+        }
+        .btn-open:hover {
+            background: #b35415;
+            transform: translateY(-0.5px);
+        }
+
+        /* Card Layout บนมือถือ */
+        .user-list {
+            display: grid;
+            gap: 15px;
+        }
+        .user-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .user-card strong {
+            color: #00b894;
+        }
+        .user-card .actions {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            table { display: none; } /* ซ่อนตารางบนมือถือ */
+            .user-list { display: block; } /* แสดง card */
+            .search-box input { width: 60%; }
+        }
+        @media (min-width: 769px) {
+            .user-list { display: none; } /* ซ่อน card บนจอใหญ่ */
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+            
+        }
+        .back-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 16px;
+             background: #3498db; 
+            color: white;
+            transition: all 0.3s ease; 
+          
+        }
+        .back-link a:hover {
+            background: #236b9b;
+            transform: translateY(-2px);
+        }
+
+    
